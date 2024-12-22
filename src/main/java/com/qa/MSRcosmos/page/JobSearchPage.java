@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import com.qa.MSRcosmos.utils.BasePage;
 import com.qa.MSRcosmos.utils.ElementUtil;
 
+
 public class JobSearchPage extends BasePage {
 
 	private WebDriver driver;
@@ -59,7 +60,10 @@ public class JobSearchPage extends BasePage {
 	public void maximizeWindow() {
 		eleUtil.maximizeWindow(driver);
 	}
+<<<<<<< HEAD
 	
+=======
+>>>>>>> e4be2a59ca78e194978ceaf85faaee673b1abd09
 	public void clickOnApplyNow() {
 		eleUtil.doClick(applyNow, 10);
 	}
@@ -67,6 +71,7 @@ public class JobSearchPage extends BasePage {
 		eleUtil.doClick(careerHome, 10);
 	}
 	
+<<<<<<< HEAD
   
     public String getActualJobTitle() {
         return eleUtil.getText(jobTitle);
@@ -75,6 +80,18 @@ public class JobSearchPage extends BasePage {
     public String getActualJobLocation() {
         return "Durham, NC, Burlington";
     }
+=======
+
+    // Mock methods to fetch actual job details (replace these with actual implementation)
+    public String getActualJobTitle() {
+        return eleUtil.getText(jobTitle);
+    }
+
+    public String getActualJobLocation() {
+        return "Durham, NC, Burlington";
+    }
+
+>>>>>>> e4be2a59ca78e194978ceaf85faaee673b1abd09
     public String getActualJobID() {
         return eleUtil.getText(jobId);
     }

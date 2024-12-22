@@ -29,12 +29,13 @@ public class ElementUtil {
 		act = new Actions(driver);
 
 	}
-	public String getText(By locator) {
-		return getElement(locator).getText();
-	}
+	
 
 	public void doClick(By locator) {
 		getElement(locator).click();
+	}
+	public String getText(By locator) {
+		return getElement(locator).getText();
 	}
 
 	public void maximizeWindow(WebDriver driver) {

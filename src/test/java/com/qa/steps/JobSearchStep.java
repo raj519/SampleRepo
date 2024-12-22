@@ -3,7 +3,11 @@ package com.qa.steps;
 import java.util.Map;
 import java.util.Properties;
 
+
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+
+
 import org.openqa.selenium.WebDriver;
 
 
@@ -76,6 +80,7 @@ public class JobSearchStep {
 
 	        
 	        String actualJobTitle = jobSearchPage.getActualJobTitle(); 
+
 //	        String actualJobLocation = jobSearchPage.getActualJobLocation();
 //	        String actualJobID = jobSearchPage.getActualJobID(); 
 System.out.println(actualJobTitle);
@@ -84,6 +89,11 @@ System.out.println(expectedJobTitle.replace("\"",""));
 	        Assert.assertEquals("Job Title does not match", expectedJobTitle.replace("\"",""), actualJobTitle.trim());
 //	        Assert.assertEquals("Job Location does not match", expectedJobLocation, actualJobLocation);
 //	        Assert.assertEquals("Job ID does not match", expectedJobID, actualJobID);
+	    
+
+	    
+
+	   
 	    
 
 	    
