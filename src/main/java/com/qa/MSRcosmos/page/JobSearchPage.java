@@ -13,10 +13,11 @@ public class JobSearchPage extends BasePage {
 
 	By careers = By.xpath("(//a[contains(text(),'Careers')])[2]");
 	By searchJob = By.xpath("//input[@placeholder='Search job title or location']");
-	By searchJobDropDown = By.xpath("//div[@class='phs-keyword-suggestions']/div/ul/li[1]/a");
+	By searchJobButton = By.xpath("//button[@aria-label='Search']");
+	By searchJobResult= By.xpath("(//span[contains(text(),'Test Automation Engineer ')])[1]");
 	By jobTitle = By.xpath("//h1[@class='job-title']");
 	By seeAllLocation = By.xpath("//button[contains(text(),'See all')]");
-
+	By careerHome = By.xpath("//button[contains(text(),'Careers Home')]");
 	By locationCheckOne = By.xpath("//span[contains(text(),'Durham, North Carolina, United States of America')]");
 	By locationCheckTwo = By.xpath("//span[contains(text(),'Fairfax, Virginia, United States of America')]");
 	By locationCheckThree = By.xpath("//span[contains(text(),'Burlington, North Carolina, United States of America')]");
@@ -41,17 +42,21 @@ public class JobSearchPage extends BasePage {
 		return driver.getTitle();
 	}
 
-	public void clickOnSearchJob() {
+	public void SearchJob() {
 		eleUtil.doSendKeys(searchJob, "Test Automation Engineer");
 	}
 
 	public void checkSearchResult() {
-		eleUtil.isElementDisplayed(searchJobDropDown);
+		eleUtil.isElementDisplayed(searchJobButton);
+		eleUtil.doClick(searchJobButton);
 	}
 
 	public void clickOnSearchResult() {
-		eleUtil.selectDropDownValueUsingSelect(searchJobDropDown, "Test Automation Engineer");
-		eleUtil.doClick(searchJobDropDown);
+		eleUtil.waitForElementVisible(searchJobResult, 10);
+		eleUtil.scrollToElementAndClick(driver, searchJobResult);
 	}
 
+	public void maximizeWindow() {
+		eleUtil.maximizeWindow(driver);
+	}
 }

@@ -27,7 +27,7 @@ public class BasePage {
 
 		Properties prop = new Properties();
 		try {
-			FileInputStream ip = new FileInputStream("");
+			FileInputStream ip = new FileInputStream("src\\test\\resources\\config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			System.out.println("Some issue with config properties");

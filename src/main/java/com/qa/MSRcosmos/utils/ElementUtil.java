@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
@@ -31,6 +32,10 @@ public class ElementUtil {
 
 	public void doClick(By locator) {
 		getElement(locator).click();
+	}
+
+	public void maximizeWindow(WebDriver driver) {
+		driver.manage().window().maximize();
 	}
 
 	public void doClick(By locator, int timeOut) {
@@ -164,6 +169,12 @@ public class ElementUtil {
 
 	public String getAlertText(int timeOut) {
 		return waitForAlertAndSwitch(timeOut).getText();
+	}
+
+	public void scrollToElementAndClick(WebDriver driver, By locator) {
+		WebElement element = driver.findElement(locator);
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+		element.click();
 	}
 
 }
