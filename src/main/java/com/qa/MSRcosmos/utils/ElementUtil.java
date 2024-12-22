@@ -29,11 +29,11 @@ public class ElementUtil {
 		act = new Actions(driver);
 
 	}
-	
 
 	public void doClick(By locator) {
 		getElement(locator).click();
 	}
+
 	public String getText(By locator) {
 		return getElement(locator).getText();
 	}
