@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import com.qa.MSRcosmos.utils.BasePage;
 import com.qa.MSRcosmos.utils.ElementUtil;
 
+
 public class JobSearchPage extends BasePage {
 
 	private WebDriver driver;
@@ -59,4 +60,24 @@ public class JobSearchPage extends BasePage {
 	public void maximizeWindow() {
 		eleUtil.maximizeWindow(driver);
 	}
+	public void clickOnApplyNow() {
+		eleUtil.doClick(applyNow, 10);
+	}
+	public void clickOnReturnToCareerHome() {
+		eleUtil.doClick(careerHome, 10);
+	}
+	
+
+    // Mock methods to fetch actual job details (replace these with actual implementation)
+    public String getActualJobTitle() {
+        return eleUtil.getText(jobTitle);
+    }
+
+    public String getActualJobLocation() {
+        return "Durham, NC, Burlington";
+    }
+
+    public String getActualJobID() {
+        return eleUtil.getText(jobId);
+    }
 }

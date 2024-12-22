@@ -33,6 +33,9 @@ public class ElementUtil {
 	public void doClick(By locator) {
 		getElement(locator).click();
 	}
+	public String getText(By locator) {
+		return getElement(locator).getText();
+	}
 
 	public void maximizeWindow(WebDriver driver) {
 		driver.manage().window().maximize();
