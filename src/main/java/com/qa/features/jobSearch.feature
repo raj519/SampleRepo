@@ -8,7 +8,7 @@ Feature: Job Search on Labcorp Website
     Then I verify the following job Details:
     
     | Detail         | Expected Value                                     |
-      | Job Title      | "Test Automation Engineer"                     |
+      | Job Title      | "Test Automation Engineer"                    |
       | Job Location   | "Durham, NC, Burlington"                                       |
       | Job ID         | "12345"                                            |     
     When I click on Apply Now
