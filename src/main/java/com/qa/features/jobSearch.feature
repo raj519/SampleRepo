@@ -9,8 +9,8 @@ Feature: Job Search on Labcorp Website
     
     | Detail         | Expected Value                                     |
       | Job Title      | "Test Automation Engineer"                    |
-      | Job Location   | "Durham, NC, Burlington"                                       |
-      | Job ID         | "12345"                                            |     
+      | Job Location  | "Durham, North Carolina, United States of America"                                       |
+      | Job ID         | "2448068"                                            |     
     When I click on Apply Now
     When I click to Return to Job Search
     Then I should be navigated back to the job search results page.

@@ -59,16 +59,14 @@ public class JobSearchStep {
 		String expectedJobTitle = jobDetails.get("Job Title");
 		String expectedJobLocation = jobDetails.get("Job Location");
 		String expectedJobID = jobDetails.get("Job ID");
-
 		String actualJobTitle = jobSearchPage.getActualJobTitle();
-
-//	        String actualJobLocation = jobSearchPage.getActualJobLocation();
-//	        String actualJobID = jobSearchPage.getActualJobID(); 
+		String actualJobLocation = jobSearchPage.getLocation();
+		String actualJobID = jobSearchPage.extractDigits();
 
 		// Assertions
 		Assert.assertEquals("Job Title does not match", expectedJobTitle.replace("\"", ""), actualJobTitle.trim());
-//	        Assert.assertEquals("Job Location does not match", expectedJobLocation, actualJobLocation);
-//	        Assert.assertEquals("Job ID does not match", expectedJobID, actualJobID);
+		Assert.assertEquals("Job Location does not match", expectedJobLocation.replace("\"", ""), actualJobLocation);
+		Assert.assertEquals("Job ID does not match", expectedJobID.replace("\"", ""), actualJobID);
 
 	}
 
@@ -84,6 +82,7 @@ public class JobSearchStep {
 
 	@Then("I should be navigated back to the job search results page.")
 	public void i_should_be_navigated_back_to_the_job_search_results_page() {
+		jobSearchPage.pageTitle();
 		driver.quit();
 	}
 
