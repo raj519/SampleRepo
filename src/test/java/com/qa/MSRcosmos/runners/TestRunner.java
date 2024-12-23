@@ -11,7 +11,7 @@ import io.cucumber.junit.CucumberOptions;
     glue = "com.qa.steps",
     plugin = {"pretty", "html:target/cucumber-report.html"},
     monochrome = true,
-    tags="@API"
+    tags="@HTTPGetAPI"
 )
 
 public class TestRunner {
