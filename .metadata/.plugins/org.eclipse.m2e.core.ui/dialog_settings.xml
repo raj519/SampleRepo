@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\Test\SampleRepo"/>
 			<item value="C:\Users\Rajnish\OneDrive\Documents\Coding_Test\CodingInterview\MSRcosmos_CodingTest"/>
 			<item value="E:\CodingTest1\SampleRepo"/>
 		</list>

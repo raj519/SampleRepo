@@ -29,6 +29,13 @@
             <artifactId>testng</artifactId>
             <version>7.8.0</version>
         </dependency>
+        
+        <!-- REST Assured -->
+        <dependency>
+        <groupId>io.rest-assured</groupId>
+        <artifactId>rest-assured</artifactId>
+        <version>4.3.3</version>
+    </dependency>
 
         <!-- WebDriver Manager -->
         <dependency>
