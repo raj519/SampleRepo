@@ -40,6 +40,7 @@ public class JobSearchPage extends BasePage {
 	}
 
 	public void SearchJob() {
+		eleUtil.waitForElementVisible(searchJob, 10);
 		eleUtil.doSendKeys(searchJob, "Test Automation Engineer");
 	}
 

@@ -10,7 +10,8 @@ import io.cucumber.junit.CucumberOptions;
     features = "src/main/java/com/qa/features",
     glue = "com.qa.steps",
     plugin = {"pretty", "html:target/cucumber-report.html"},
-    monochrome = true
+    monochrome = true,
+    tags = "@HTTPPostAPI or @HTTPGetAPI or @jobSearchUI"
 )
 
 public class TestRunner {

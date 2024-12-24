@@ -1,3 +1,4 @@
+@jobSearchUI 
 Feature: Job Search on Labcorp Website
 
   Scenario: Search job position on Labcorp website
